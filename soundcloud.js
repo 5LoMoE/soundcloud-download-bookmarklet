@@ -16,15 +16,13 @@
     		song_titles = $('.soundTitle__title'),
     		song_urls	= [];
 
-
-
-        if (song_titles.length > 1) {
-            $.each(song_titles, function (a, z) {
+        $.each(song_titles, function (a, z) {
+            if ($(z).attr('href')) {
                 song_urls.push('https://soundcloud.com'+$(z).attr('href'));
-            });
-        } else if (song_titles.length == 1) {
-            song_urls.push(location.href);
-        }
+            } else {
+                song_urls.push('https://soundcloud.com'+location.pathname);
+            }
+        });
 
         window.setTimeout(function(){
         	window.SC.initialize({
@@ -57,7 +55,7 @@
     				}
     			});
     		});
-        }, 500);
+        }, 600);
     } else {
         return;
     }
