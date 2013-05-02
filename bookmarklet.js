@@ -2,6 +2,6 @@ javascript:(function(){
 	var scripts = document.getElementsByTagName('script')[0],
 		script  = document.createElement('script');
 
-	script.src = 'https://bitbucket.org/tschuermans/soundcloud-download-bookmarklet/raw/41af149b5a524a6b735dbfa10f17ffedccb838c4/soundcloud.js';
+	script.src = 'https://bitbucket.org/api/1.0/repositories/tschuermans/soundcloud-download-bookmarklet/raw/master/soundcloud.js';
 	scripts.parentNode.insertBefore(script, scripts);
 })();
