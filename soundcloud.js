@@ -1,4 +1,4 @@
-javascript:(function(){
+(function(){
     var location = document.location;
 
     if (location.hostname == 'soundcloud.com') {
@@ -18,11 +18,11 @@ javascript:(function(){
 
 
 
-        if (location.pathname.match(/^\/stream/i)) {
+        if (song_titles.length > 1) {
             $.each(song_titles, function (a, z) {
                 song_urls.push('https://soundcloud.com'+$(z).attr('href'));
             });
-        } else {
+        } else if (song_titles.length == 1) {
             song_urls.push(location.href);
         }
 
