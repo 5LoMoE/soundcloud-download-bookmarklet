@@ -1,4 +1,4 @@
-SoundCloud downlaod bookmarklet
+SoundCloud download bookmarklet
 ===============================
 
 JavaScript bookmarklet which enables downloading of tracks/sets from SoundCloud
